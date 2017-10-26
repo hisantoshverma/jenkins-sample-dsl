@@ -7,4 +7,4 @@
 service1  service1-git-repo
 service2  service2-git-repo
 service3  service3-git-repo
-custom-service  custom-service-repo
+custom_service  custom-service-repo
