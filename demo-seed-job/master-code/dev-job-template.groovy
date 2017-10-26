@@ -110,7 +110,7 @@ job("Dev-builder-SERVICENAME") {
         shell('mkdir docker_image \n cp target/*exec.jar docker_image/ \n cp -a config docker_image/ \n cp scripts/Dockerfile docker_image/')
         shell ('echo ${BUILD_NUMBER}_$(date +"%d-%m-%Y_%H%M") > version.txt')
           }
-          
+
   // Step adding to update build name with time stamp //
     steps {
         configure {
@@ -160,7 +160,7 @@ job("Dev-builder-SERVICENAME") {
              }
 
      publishers {
-        findbugs('**/findbugs-result.xml', false)
+//        findbugs('**/findbugs-result.xml', false)
         extendedEmail {
             recipientList('my-email-id@globallogic.com')
             defaultSubject('$DEFAULT_SUBJECT')

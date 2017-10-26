@@ -186,7 +186,7 @@ steps {
 
 
   publishers {
-        findbugs('**/findbugs-result.xml', false)
+//        findbugs('**/findbugs-result.xml', false)
         extendedEmail {
             recipientList('xxxxx@xxx.com')
             defaultSubject('$DEFAULT_SUBJECT')
