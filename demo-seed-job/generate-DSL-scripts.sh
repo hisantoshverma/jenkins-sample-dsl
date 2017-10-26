@@ -8,20 +8,20 @@ do
 echo $serviveName $gitUrl
 
 # coping template to dunamic folder with service name prefix.
-cp master-code/dev-job-template.groovy dynamic-list/${serviveName}DevJob.groovy
-cp master-code/qa-job-template.groovy dynamic-list/${serviveName}qaJob.groovy
-cp master-code/stage-job-template.groovy dynamic-list/${serviveName}StageJob.groovy
+cp master-code/dev-job-template.groovy dynamic-jobs/${serviveName}DevJob.groovy
+cp master-code/qa-job-template.groovy dynamic-jobs/${serviveName}qaJob.groovy
+cp master-code/stage-job-template.groovy dynamic-jobs/${serviveName}StageJob.groovy
 
 # Replacing tokens, SERVICENAME & BITBUCKETURL with exact value as per input file.
-sed -i "s/SERVICENAME/${serviveName}/" dynamic-list/${serviveName}DevJob.groovy
-sed -i "s/BITBUCKETURL/${gitUrl}/" dynamic-list/${serviveName}DevJob.groovy
+sed -i "s/SERVICENAME/${serviveName}/" dynamic-jobs/${serviveName}DevJob.groovy
+sed -i "s/BITBUCKETURL/${gitUrl}/" dynamic-jobs/${serviveName}DevJob.groovy
 
-sed -i "s/SERVICENAME/${serviveName}/" dynamic-list/${serviveName}qaJob.groovy
-sed -i "s/BITBUCKETURL/${gitUrl}/" dynamic-list/${serviveName}qaJob.groovy
+sed -i "s/SERVICENAME/${serviveName}/" dynamic-jobs/${serviveName}qaJob.groovy
+sed -i "s/BITBUCKETURL/${gitUrl}/" dynamic-jobs/${serviveName}qaJob.groovy
 
-sed -i "s/SERVICENAME/${serviveName}/" dynamic-list/${serviveName}StageJob.groovy
-sed -i "s/BITBUCKETURL/${gitUrl}/" dynamic-list/${serviveName}StageJob.groovy
+sed -i "s/SERVICENAME/${serviveName}/" dynamic-jobs/${serviveName}StageJob.groovy
+sed -i "s/BITBUCKETURL/${gitUrl}/" dynamic-jobs/${serviveName}StageJob.groovy
 
 done
 # to generate Jenkins view
-cp master-code/viewtemplate.groovy dynamic-list/viewtemplate.groovy
+cp master-code/viewtemplate.groovy dynamic-jobs/viewtemplate.groovy
