@@ -83,7 +83,7 @@ job("Dev-builder-custom-service") {
       }
 
   publishers {
-        findbugs('**/findbugs-result.xml', false)
+//        findbugs('**/findbugs-result.xml', false)
         extendedEmail {
             recipientList('xxxx@xx.com')
             defaultSubject('$DEFAULT_SUBJECT')
