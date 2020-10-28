@@ -2,7 +2,7 @@
 Sample code of Jenkins DSL for Seed job
 ## How DSL plugin helps to setup Jenkins Jobs
 
-If you are from DevOps, System Admin, Build and release engineer or dealing with Jenkins by any means then this blog might be helpful for you.
+If you are from DevOps, System Admin, Build and release engineer or dealing with Jenkins by any means then this sample code might be helpful for you.
 In my case, we were in the initial phase of the project, every next day we needed to set up a new Jenkins build and deploy a job for fresh micro service. And moving ahead, now everything is promoted to a new environment ( like dev, QA , Stage ), again setup everything here, which are almost replicas of the previous environment. Probably, you are thinking of automating it through Jenkins cli, even though I did my initial automation by Jenkins cli with Ansible. Suddenly I went through the DSL plugin, I realized that is what I was looking for.
 
 Before going forward, I’d like to highlight some points. If you find yourself around it, then this blog will be really helpful for you.
@@ -33,6 +33,7 @@ Steps to create Jenkins seed job.
 
 1: Create a free style project in Jenkins.
 2: Use my sample DSL code in scm settings.
+![Screenshot](Screenshots/Jenkins-DSL-build-step1.png)
 3: Enable execute shell and add following command :
      cd demo-seed-job
      sh generate-DSL-scripts.sh
@@ -43,6 +44,7 @@ Above script (generate-DSL-scripts.sh) will actually generate DSL code for all r
 3: Add another build step and enable “Process Job DSLs” and add following lines:
      demo-seed-job/dynamic-jobs/*.groovy
      demo-seed-job/custom-jobs/*.groovy
+     ![Screenshot](Screenshots/Jenkins-DSL-build-step2.png)
 
     
 Plugin will read groovy code from the above path and create/update Jenkins jobs accordingly.
@@ -54,3 +56,9 @@ Plugin will read groovy code from the above path and create/update Jenkins jobs 
   
 
 
+## Functional flow of Jenkins Seed Job:
+![Screenshot](Screenshots/Jenkins-DSL-functional-flow.png)
+
+
+## Tree structure of sample code:
+![Screenshot](Screenshots/Jenkins-DSL-tree.png)
