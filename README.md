@@ -1,5 +1,11 @@
-# jenkins-sample-dsl
+# Jenkins-sample-dsl
 Sample code of Jenkins DSL for Seed job
+
+### Dependencies:
+    DSL Plugin version > 1.68 
+    https://plugins.jenkins.io/job-dsl/
+### DSL code playground
+    https://job-dsl.herokuapp.com/
 ## How DSL plugin helps to setup Jenkins Jobs
 
 If you are from DevOps, System Admin, Build and release engineer or dealing with Jenkins by any means then this sample code might be helpful for you.
