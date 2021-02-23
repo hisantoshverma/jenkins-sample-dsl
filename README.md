@@ -1,5 +1,5 @@
 # Jenkins-sample-dsl
-Sample code of Jenkins DSL for Seed job
+Sample code of Jenkins DSL for Seed job.
 
 ### Dependencies:
     DSL Plugin version > 1.68 
